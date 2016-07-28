@@ -1,0 +1,48 @@
+<head>
+  <title>proba</title>
+</head>
+
+<body class='body'>
+  <div class='container'>
+    <div class='sidebar'>
+
+      <div class='loginButtons'>{{> loginButtons}}</div>
+      <div class='statsContainer'>
+        <div class='stats'>{{> stats}}</div>
+      </div>
+      
+      <!-- <ul>
+        {{#each users}}
+          <li>Username: {{username}}, id: {{_id}}</li>
+        {{/each}}
+      </ul> -->
+
+    </div>
+    <div class='mainWindow'>
+      <div class='game'>
+        <div class='box box1'>&times;</div>
+        <div class='box box2'>&#9675;</div>
+        <div class='box box3'>&times;</div>
+        <div class='box box4'>&times;</div>
+        <div class='box box5'>&times;</div>
+        <div class='box box6'>&#9675;</div>
+        <div class='box box7'>&#9675;</div>
+        <div class='box box8'>&#9675;</div>
+        <div class='box box9'>&times;</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<template name='stats'>
+{{#if currentUser.profile}}
+  <p>Games played: {{gamesPlayed}}</p>
+  <p>Games won: {{gamesWon}}</p>
+  <p>Games won as X: {{gamesWonAsX}}</p>
+  <p>Games won as O: {{gamesWonAsO}}</p>
+  <p>Games lost: {{gamesLost}}</p>
+  <p>Games lost as X: {{gamesLostAsX}}</p>
+  <p>Games lost as O: {{gamesLostAsO}}</p>
+  <p>Draw: {{gamesDraw}}</p>
+{{/if}}
+</template>
